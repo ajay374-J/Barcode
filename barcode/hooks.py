@@ -29,7 +29,8 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Purchase Receipt" : "public/js/purchase_receipt.js",
+            "Work Order" : "public/js/work_order.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -102,13 +103,13 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	# "Purchase Receipt": {
+	# 	"before_save": "barcode.custom_purchase_receipt.barcode",
+    #     # "after_insert": "barcode.custom_purchase_receipt.barcode_item",
+		
+	# }
+}
 
 # Scheduled Tasks
 # ---------------
