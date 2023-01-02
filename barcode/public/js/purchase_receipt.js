@@ -16,7 +16,7 @@ frappe.ui.form.on("Purchase Receipt Item", {
     uom:function(frm,cdt,cdn){
         var row=locals[cdt][cdn]
         frappe.call({
-            method: 'barcode.custom_purchase_receipt.barcode_item',
+            method: 'barcode.custom_purchase_receipt.barcode_uom',
             args: {
                 item_code: row.item_code,
                 uom:row.uom
@@ -27,5 +27,4 @@ frappe.ui.form.on("Purchase Receipt Item", {
             }
         });
         },
-
 })
