@@ -25,10 +25,10 @@ def barcode_uom(item_code,uom):
 
 
 
-@frappe.whitelist()
-def scan_warehouse_barcode(sc):
-    doc=frappe.db.get_value("Warehouse",{"barcode_no":sc},["name"])
-    if doc:
-        return doc
-    else:
-        frappe.throw("No warhouse found for given barcode!!")
+# @frappe.whitelist()
+# def scan_warehouse_barcode(sc):
+#     doc=frappe.db.get_value("Warehouse",{"barcode_no":sc},["name"])
+#     if doc:
+#         return doc
+#     else:
+#         frappe.throw("No warhouse found for given barcode!!")
